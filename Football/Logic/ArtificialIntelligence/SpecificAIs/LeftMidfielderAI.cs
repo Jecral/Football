@@ -1,0 +1,26 @@
+﻿using Football.Logic.GameObjects.Player;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Football.Logic.ArtificialIntelligence.SpecificAIs
+{
+    class LeftMidfielderAI : MidfielderAI
+    {
+        public LeftMidfielderAI(AI gameAI) : base(gameAI)
+        {
+            LeftSideRunRoom = new Rectangle(new Point(10, 0), new Size(GameAI.FieldCell.GetLength(0) - 10, GameAI.FieldCell.GetLength(1) / 3));
+            RightSideRunRoom = new Rectangle(new Point(0, GameAI.FieldCell.GetLength(1) / 2), new Size(GameAI.FieldCell.GetLength(0) - 10, GameAI.FieldCell.GetLength(1) / 3 * 2));
+            DefenceBallDistance = 5;
+            DistanceToEnemy = 3;
+        }
+
+        public override Rectangle LeftSideRunRoom { get; set; }
+        public override Rectangle RightSideRunRoom { get; set; }
+        public override int DefenceBallDistance { get; set; }
+        public override int DistanceToEnemy { get; set; }
+    }
+}

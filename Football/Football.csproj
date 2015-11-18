@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D2B5E4EA-C517-4A96-97B2-3580B4CF18C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Football</RootNamespace>
+    <AssemblyName>Football</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>appIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\General\FieldPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\General\EditableFieldPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\General\GameSettingsPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\General\ReplayManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\General\SingleplayerSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Multiplayer\ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Multiplayer\ConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Multiplayer\MultiplayerLobbyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Multiplayer\ChatTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Multiplayer\TeamChangerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\CustomListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\CustomRenderer.cs" />
+    <Compile Include="GUI\Other\FilterTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\InputDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\FilterComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\IntegerTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\CustomColorTable.cs" />
+    <Compile Include="GUI\Other\MessageInputTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logic\BlockedRoom.cs" />
+    <Compile Include="Logic\GameFiles\CachedGameAction.cs" />
+    <Compile Include="Logic\GameFiles\GameEventHandler.cs" />
+    <Compile Include="GUI\Other\ActionDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Other\BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\General\InformationPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logic\ArtificialIntelligence\AI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\PlayerAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\CentralDefenderAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\CentralMidfielderAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\DefenderAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\GoalkeeperAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\LeftBackAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\LeftMidfielderAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\MidfielderAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\RightBackAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\RightMidfielderAI.cs" />
+    <Compile Include="Logic\ArtificialIntelligence\SpecificAIs\StrikerAI.cs" />
+    <Compile Include="Logic\Conflict\RunConflict.cs" />
+    <Compile Include="Logic\Conflict\LastPoint.cs" />
+    <Compile Include="Logic\Conflict\RunConflictHandler.cs" />
+    <Compile Include="Logic\Conflict\TackleConflictHandler.cs" />
+    <Compile Include="Logic\GameFiles\Images\GameImage.cs" />
+    <Compile Include="Logic\GameFiles\Images\ChangeoverImage.cs" />
+    <Compile Include="Logic\GameFiles\Images\GoalImage.cs" />
+    <Compile Include="Logic\GameObjects\CachedBall.cs" />
+    <Compile Include="Logic\GameObjects\Player\RoundAction.cs" />
+    <Compile Include="Logic\GameObjects\Player\CachedRoundAction.cs" />
+    <Compile Include="Logic\GameObjects\Player\PlayerAction.cs" />
+    <Compile Include="Logic\GameFiles\GameAction.cs" />
+    <Compile Include="Logic\GameObjects\Player\CachedPlayerAction.cs" />
+    <Compile Include="Logic\GameObjects\Player\CachedPlayer.cs" />
+    <Compile Include="Logic\GameFiles\GameSettings.cs" />
+    <Compile Include="Logic\GameFiles\Images\RoundImage.cs" />
+    <Compile Include="Logic\Pathfinding.cs" />
+    <Compile Include="Logic\GameObjects\Ball.cs" />
+    <Compile Include="GUI\General\FieldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logic\GameFiles\Game.cs" />
+    <Compile Include="Logic\GameObjects\GameObject.cs" />
+    <Compile Include="Logic\GameObjects\Goal.cs" />
+    <Compile Include="Logic\GameObjects\Player\Player.cs" />
+    <Compile Include="Logic\ReplayManager.cs" />
+    <Compile Include="EventArguments\BoolEventArgs.cs" />
+    <Compile Include="EventArguments\ConnectionSettingsEventArgs.cs" />
+    <Compile Include="EventArguments\FieldSettingsEventArgs.cs" />
+    <Compile Include="EventArguments\FoulEventArgs.cs" />
+    <Compile Include="EventArguments\GameImageEventArgs.cs" />
+    <Compile Include="EventArguments\RoundImageEventArgs.cs" />
+    <Compile Include="EventArguments\GameStatusEventArgs.cs" />
+    <Compile Include="EventArguments\ChangeoverEventArgs.cs" />
+    <Compile Include="EventArguments\GoalEventArgs.cs" />
+    <Compile Include="EventArguments\PointReceivedArgs.cs" />
+    <Compile Include="EventArguments\ReceivedActionArgs.cs" />
+    <Compile Include="EventArguments\RoundJumpEventArgs.cs" />
+    <Compile Include="EventArguments\TeamChangeEventArgs.cs" />
+    <Compile Include="EventArguments\UserListEventArgs.cs" />
+    <Compile Include="EventArguments\UsernameChangeEventArgs.cs" />
+    <Compile Include="Multiplayer\MessageArguments\ChatMessageArgs.cs" />
+    <Compile Include="Multiplayer\MessageArguments\ServerMessageArgs.cs" />
+    <Compile Include="Multiplayer\MultiplayerHandler.cs" />
+    <Compile Include="Multiplayer\User.cs" />
+    <Compile Include="Multiplayer\ConnectionDatabaseManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Multiplayer\Network\Client.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Logic\GameObjects\Team.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connections.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appIcon.ico" />
+    <None Include="Resources\Images\MenuItemPencilImage.png" />
+    <None Include="Resources\Images\MenuItemPencilImage.svg" />
+    <None Include="Resources\Images\MenuItemInternetImage.png" />
+    <None Include="Resources\Images\Exit.gif" />
+    <None Include="Resources\Images\openToolStripMenuItem.Image.png" />
+    <None Include="Resources\Images\GoalKeeperLeftBall.png" />
+    <None Include="Resources\Images\GoalKeeperRight.png" />
+    <None Include="Resources\Images\GoalKeeperLeft.png" />
+    <None Include="Resources\Images\GoalKeeperRightBall.png" />
+    <None Include="Resources\Images\Stadium2.jpg" />
+    <None Include="Resources\Images\Player0BallLeft.png" />
+    <None Include="Resources\Images\Multiplayer_lobby.png" />
+    <None Include="Resources\Images\LittleBallImage.png" />
+    <None Include="Resources\Images\FieldSettingsBackground.png" />
+    <None Include="Resources\Images\DirectionOneCell.png" />
+    <None Include="Resources\Images\DirectionNoCell.png" />
+    <None Include="Resources\Images\DirectionExactWay.png" />
+    <None Include="Resources\Images\DirectionDirectWay.png" />
+    <None Include="Resources\Images\Player1Right.png" />
+    <None Include="Resources\Images\Player1OnGround.png" />
+    <None Include="Resources\Images\Player1Left.png" />
+    <None Include="Resources\Images\Player1BallRight.png" />
+    <None Include="Resources\Images\Player1BallLeft.png" />
+    <None Include="Resources\Images\Player0Right.png" />
+    <None Include="Resources\Images\Player0OnGround.png" />
+    <None Include="Resources\Images\Player0Left.png" />
+    <None Include="Resources\Images\Player0BallRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomTabControl\CustomTabControl.csproj">
+      <Project>{e74f0227-88d0-49fe-864d-b7dd96ba43f6}</Project>
+      <Name>CustomTabControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
